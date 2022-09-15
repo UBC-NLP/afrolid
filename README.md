@@ -1,6 +1,6 @@
 <p align="center">
     <br>
-    <img src="./images/afrolid_logo.png"/>
+    <img src="./images/afrolid_logo.jpg"/>
     <br>
 <p>
 
