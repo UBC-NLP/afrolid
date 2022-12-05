@@ -51,8 +51,7 @@ The [full documentation](https://afrolid.readthedocs.io/en/latest/) contains ins
 ## Colab Examples
 ### (1) Integrate Turjuman with your python code
 <table style='border:1px red;' width='100%'>
-<tr><td><b>Functions</b></td><td> <b>Content</b></td><td><b>Colab link</b></td></tr>
-<td>translate <br> translate_from_file</td>
+<tr><td> <b>Content</b></td><td><b>Colab link</b></td></tr>
 <td>
     <ul>
         <li> Install AfroLID </li>
@@ -64,6 +63,23 @@ The [full documentation](https://afrolid.readthedocs.io/en/latest/) contains ins
 </td>
 <td> <a href="https://colab.research.google.com/github/UBC-NLP/afrolid/blob/main/examples/Integrate_afrolid_with_your_code.ipynb"><img alt="colab" src="https://colab.research.google.com/assets/colab-badge.svg"></td>
 </tr>
+</table>
+
+### (2) Command Line Interface
+<table style='border:1px red;' width='100%'>
+<tr><td><b>Command</b></td><td> <b>Content</b></td><td><b>Colab link</b></td></tr>
+<tr>
+<td>afrolid_cli</td>
+<td>
+    <ul>
+        <li> Usage and Arguments </li>
+        <li> Examples</li>
+    </ul>
+</td>
+<td> <a href="https://colab.research.google.com/github/UBC-NLP/turjuman/blob/main/examples/afrolid_cli.ipynb"><img alt="colab" src="https://colab.research.google.com/assets/colab-badge.svg"></td>
+</tr>
+<tr>
+
 </table>
 
 
