@@ -1,7 +1,0 @@
-author= "Ife Adebara, AbdelRahim Elmadany, Muhammad Abdul-Mageed, Alcides Alcoba Inciarte"
-copyright= "Copyright 2022, University of British Columbia (UBC), Deep learning and Natural Langauge Processing Lab"
-license= "GPL"
-version= "0.1.dev"
-email= "a.elmadany@ubc.ca"
-status= "Production"
-description="AfroLID, a powerful neural toolkit for African languages identification which covers 517 African languages.."

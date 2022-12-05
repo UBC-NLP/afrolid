@@ -22,15 +22,15 @@ setup(name='afrolid',
           # 'protobuf',
           'sentencepiece',
           'fairseq',
-          'pandas',
+          # 'pandas',
           'tqdm',
         ],
-      # entry_points={
-      #       "console_scripts": [
-      #           "turjuman_translate = turjuman_cli.translate:translate_cli",
-      #           "turjuman_score = turjuman_cli.score:score_cli",
-      #           "afrolid_interactive = turjuman_cli.interactive:interactive_cli",
-      #       ],
-        # },
+      entry_points={
+            "console_scripts": [
+                "afrolid_cli = afrolid.cli:afrolid_cli",
+                # "turjuman_score = turjuman_cli.score:score_cli",
+                # "afrolid_interactive = afrolid_cli.interactive:interactive_cli",
+            ],
+        },
       
       )

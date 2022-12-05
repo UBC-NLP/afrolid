@@ -6,26 +6,18 @@ import torch
 import torch.nn.functional as F
 import regex
 import sentencepiece as spm
-import pandas as pd
-import logging
-import os
-import sys
-logging.basicConfig(
-    format="%(asctime)s | %(levelname)s | %(name)s | %(message)s",
-    datefmt="%Y-%m-%d %H:%M:%S",
-    level=os.environ.get("LOGLEVEL", "INFO").upper(),
-    stream=sys.stdout,
-)
+
+
 # import math
 class classifier():
-  def __init__(self, model_path):
-    self.logger = logging.getLogger(__name__)
+  def __init__(self, logger, model_path):
+    self.logger = logger
     self.model_path = model_path
     self.afrolid_task, self.model, self.tokenizer= self.init_task_model()
     self.lang_info = self.load_langs_info()
-    print(self.lang_info)
+    # print(self.lang_info)
   def init_task_model(self):
-    print("dddsssssssss")
+    # print("dddsssssssss")
     self.logger.info("Initalizing AfroLID's task and model.")
     parser = argparse.ArgumentParser(allow_abbrev=False)
     parser.add_argument("--task", metavar="TASK", default='afrolid_task',)
