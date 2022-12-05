@@ -11,10 +11,10 @@
 <a href="https://github.com/UBC-NLP/afrolid/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/UBC-NLP/afrolid"></a>
 <a href="https://github.com/UBC-NLP/afrolid/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/UBC-NLP/afrolid"></a>
 
+<img src="./images/afrolid_logo.jpg" alt="AfroLID" width="70%" />
 </p>
  
 
-<center><img src="./images/afrolid_logo.jpg" alt="AfroLID" width="70%" /> </center>
 
 AfroLID, a neural LID toolkit for 517 African languages and varieties. AfroLID exploits a multi-domain web dataset manually curated from across 14 language families utilizing five orthographic systems. AfroLID is described in this paper: 
 [**AfroLID: A Neural Language Identification Tool for African Languages**](https://arxiv.org/abs/2210.11744).
@@ -24,7 +24,8 @@ AfroLID, a neural LID toolkit for 517 African languages and varieties. AfroLID e
 ## Requirements
 - Download AfroLID model:
 ```shell
-    wget pip install -U afrolid
+    wget https://demos.dlnlp.ai/afrolid/afrolid_model.tar.gz
+    tar -xf afrolid_model.tar.gz
 ```
 
 ## Installation
