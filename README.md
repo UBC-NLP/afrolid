@@ -10,7 +10,8 @@
 <a href='https://afrolid.readthedocs.io/en/latest/?badge=latest'><img src='https://readthedocs.org/projects/afrolid/badge/?version=latest' alt='Documentation Status' /></a>
 <a href="https://github.com/UBC-NLP/afrolid/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/UBC-NLP/afrolid"></a>
 <a href="https://github.com/UBC-NLP/afrolid/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/UBC-NLP/afrolid"></a>
-
+</p>
+<p align="center">
 <img src="./images/afrolid_logo.jpg" alt="AfroLID" width="70%" />
 </p>
  
