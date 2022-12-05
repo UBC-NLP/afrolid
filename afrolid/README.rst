@@ -34,7 +34,7 @@ useful, please cite our paper as follows:
   year = "2022",
 }
 
-7. Acknowledgments
+Acknowledgments
 ------------------
 
 We gratefully acknowledge support from the Natural Sciences and Engineering Research Council of Canada (NSERC; RGPIN-2018-04267), the Social Sciences and Humanities Research Council of Canada (SSHRC; 435-2018-0576; 895-2020-1004; 895-2021-1008),  `The Digital Research Alliance of Canada (the Alliance) <www.alliancecan.ca/en>`__ and `UBC
