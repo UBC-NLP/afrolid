@@ -14,14 +14,20 @@
 </p>
  
 
-<img src="./images/afrolid_logo.jpg" alt="AfroLID">
+<center><img src="./images/afrolid_logo.jpg" alt="AfroLID" width="70%" /> </center>
 
 AfroLID, a neural LID toolkit for 517 African languages and varieties. AfroLID exploits a multi-domain web dataset manually curated from across 14 language families utilizing five orthographic systems. AfroLID is described in this paper: 
 [**AfroLID: A Neural Language Identification Tool for African Languages**](https://arxiv.org/abs/2210.11744).
 
 <br>
 
-## Requirements and Installation
+## Requirements
+- Download AfroLID model:
+```shell
+    wget pip install -U afrolid
+```
+
+## Installation
 - To install AfroLID and develop directly using pip:
 ```shell
     pip install -U afrolid
