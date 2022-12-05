@@ -1,0 +1,7 @@
+regex
+torch
+protobuf
+sentencepiece
+fairseq
+pandas
+tqdm
