@@ -4,7 +4,7 @@ import torch
 
 from fairseq.data import Dictionary, LanguagePairDataset
 from afrolid.tasks import FairseqTask, register_task
-
+ 
 @register_task('afrolid_task')
 class afrolid_task(FairseqTask):
 
