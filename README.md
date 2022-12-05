@@ -14,7 +14,7 @@
 </p>
  
 
-<img src="./images/afrolid_logo.jpg" alt="AfroLID"/>
+<img src="./images/afrolid_logo.jpg" alt="AfroLID">
 
 AfroLID, a neural LID toolkit for 517 African languages and varieties. AfroLID exploits a multi-domain web dataset manually curated from across 14 language families utilizing five orthographic systems. AfroLID is described in this paper: 
 [**AfroLID: A Neural Language Identification Tool for African Languages**](https://arxiv.org/abs/2210.11744).
