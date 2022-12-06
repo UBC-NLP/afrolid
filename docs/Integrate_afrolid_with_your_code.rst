@@ -1,14 +1,14 @@
-Integrate turjuman with python code
+Integrate AfroLID with python code
 =========================================
 
 .. container:: cell markdown
 
-   .. rubric:: (1) Install Turjuman
+   .. rubric:: (1) Install AfroLID
       :name: 1-install-turjuman
 
 .. code-block:: console
 
-      pip install git+https://github.com/UBC-NLP/turjuman.git --q
+      pip install git+https://github.com/UBC-NLP/afrolid.git --q
 
 .. container:: cell markdown
 
