@@ -25,14 +25,18 @@ If you use AfroLID toolkit or the pre-trained models for your
 scientific publication, or if you find the resources in this repository
 useful, please cite our paper as follows:
 
+
+useful, please cite our paper as follows:
+
 ::
+
   @article{adebara2022afrolid,
-  title={AfroLID: A Neural Language Identification Tool for African Languages},
-  author={Adebara, Ife and Elmadany, AbdelRahim and Abdul-Mageed, Muhammad and Inciarte, Alcides Alcoba},
-  booktitle = "Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
-  month = December,
-  year = "2022",
-}
+    title={AfroLID: A Neural Language Identification Tool for African Languages},
+    author={Adebara, Ife and Elmadany, AbdelRahim and Abdul-Mageed, Muhammad and Inciarte, Alcides Alcoba},
+    booktitle = "Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+    month = December,
+    year = "2022",
+  }
 
 Acknowledgments
 ------------------
