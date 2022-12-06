@@ -70,3 +70,8 @@ Usage and Arguments
                   |-- ISO: asa	Name: Asu	Script: Latin	Score: 0.01%
             Type your input text or (q) to STOP: q
 
+Google Colab Link
+-----------------
+
+You can find the full examples on the Google Colab on the following link
+https://colab.research.google.com/github/UBC-NLP/afrolid/blob/main/examples/afrolid_interactive_cli.ipynb

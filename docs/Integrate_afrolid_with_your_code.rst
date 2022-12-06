@@ -113,4 +113,4 @@ Google Colab Link
 -----------------
 
 You can find the full examples on the Google Colab on the following link
-https://colab.research.google.com/github/UBC-NLP/turjuman/blob/main/examples/Integrate_turjuman_with_your_code.ipynb
+https://colab.research.google.com/github/UBC-NLP/afrolid/blob/main/examples/Integrate_afrolid_with_your_code.ipynb
