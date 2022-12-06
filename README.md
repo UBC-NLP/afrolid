@@ -76,7 +76,7 @@ The [full documentation](https://afrolid.readthedocs.io/en/latest/) contains ins
         <li> Examples</li>
     </ul>
 </td>
-<td> <a href="https://colab.research.google.com/github/UBC-NLP/turjuman/blob/main/examples/afrolid_cli.ipynb"><img alt="colab" src="https://colab.research.google.com/assets/colab-badge.svg"></td>
+<td> <a href="https://colab.research.google.com/github/UBC-NLP/turjuman/blob/main/examples/afrolid_interactive_cli.ipynb"><img alt="colab" src="https://colab.research.google.com/assets/colab-badge.svg"></td>
 </tr>
 <tr>
 
