@@ -12,87 +12,85 @@ Integrate turjuman with python code
 
 .. container:: cell markdown
 
-Initial turjuman object
+Initial AfroLID object
 ----------------------------
 Import related packges 
 
 .. code:: python
 
+      import os, sys
       import logging
-      import os
-      from turjuman import turjuman
-
-Inital the logger and set ``cache_dir``
+      from afrolid.main import classifier
 
 .. code:: python
 
       logging.basicConfig(
-          format="%(asctime)s | %(levelname)s | %(name)s | %(message)s",
-          datefmt="%Y-%m-%d %H:%M:%S",
-          level=os.environ.get("LOGLEVEL", "INFO").upper(),
+            format="%(asctime)s | %(levelname)s | %(name)s | %(message)s",
+            datefmt="%Y-%m-%d %H:%M:%S",
+            level=os.environ.get("LOGLEVEL", "INFO").upper(),
+            force=True, # Resets any previous configuration
       )
-      logger = logging.getLogger("turjuman.translate")
-      cache_dir="/content/mycache"
+      logger = logging.getLogger("afroli")
 
 Create turjuman object
 
 .. code:: python
 
-      torj = turjuman.turjuman(logger, cache_dir)
+      cl = classifier(logger, model_path=/path/to/model)
 
 
 
-Translate using beam search (default)
+Get language prediction(s)
 -------------------------------------
-``Beam search`` is the ``default`` generation method on Turjuman
-   -  Beam search default setting:
-
-      -  ``-s`` or ``--seq_length``: The maximum sequence length value, (``default value is 300``)
-      -  ``-o`` or ``--max_outputs``: The maxmuim of the output tanslations (``default value is 1``)
-      -  ``-b`` or ``--num_beams NUM_BEAMS``: Number of beams (``default value is 1``)
-      -  ``-n`` or ``--no_repeat_ngram_size``: Number of n-gram that doesn't appears twice (``default value is 2``)
-
 
 .. code:: python
 
-      beam_options = {"search_method":"beam", "seq_length": 300, "num_beams":5, "no_repeat_ngram_size":2, "max_outputs":1}
-      target = torj.translate("As US reaches one million COVID deaths, how are Americans coping?",**beam_options)
-      print (target)
+     ## Gold label = dip
+      text="6Acï looi aya në wuöt dït kɔ̈k yiic ku lɔ wuöt tɔ̈u tëmec piny de Manatha ku Eparaim ku Thimion , ku ɣään mec tɔ̈u të lɔ rut cï Naptali"
+      predicted_langs = cl.classify(text) # default max_outputs=3
+      print("Predicted languages:")
+      for lang in predicted_langs:
+      print("     |-- ISO: {}\tName: {}\tScript: {}\tScore: {}%".format(
+                      lang,
+                      predicted_langs[lang]['name'], 
+                      predicted_langs[lang]['script'],
+                      predicted_langs[lang]['score']))
 
-.. code-block:: console
 
-         {'source': 'As US reaches one million COVID deaths, how are Americans coping?', 'target': ['وبينما تصل الولايات المتحدة إلى مليون حالة وفاة من فيروس كوفيد-19 ، كيف يتعامل الأمريكيون مع ذلك ؟']}
 
-Translate using greedy search
+.. code:: python
+      ## Gold label = kmy
+      text="Ama vuodieke nɩŋ mana n Chʋa Ŋmɩŋ dɩ nagɩna yɩ mɩŋ , nan keŋ n jigiŋ a yi mɩŋ yada , ta n kaaŋ yagɩ vuodieke nɩŋ dɩ kienene n jigiŋ"
+      predicted_langs = cl.classify(text)  # default max_outputs=3
+      print("Predicted languages:")
+      for lang in predicted_langs:
+      print("     |-- ISO: {}\tName: {}\tScript: {}\tScore: {}%".format(
+                      lang,
+                      predicted_langs[lang]['name'], 
+                      predicted_langs[lang]['script'],
+                      predicted_langs[lang]['score']))    
+
+
+Integrate with Pandas
 -----------------------------------
- ``Greedy search`` default setting:
-   -  ``-s`` or ``--seq_length``: The maximum sequence length value, (``default value is 300``)
-.. code:: python
+ .. code:: python
 
-      greedy_options = {"search_method":"greedy", "seq_length": 300}
-      target = torj.translate("As US reaches one million COVID deaths, how are Americans coping?",**greedy_options)
-      print (target)
+      wget https://raw.githubusercontent.com/UBC-NLP/afrolid/main/examples/examples.tsv -O examples.tsv
 
-.. code-block:: console
-
-         {'source': 'As US reaches one million COVID deaths, how are Americans coping?', 'target': ['وبما أن الولايات المتحدة تصل إلى مليون حالة وفاة من فيروس كوفيد-19 ، كيف يمكن للولايات المتحدة أن تتصدى لهذا ؟']}
-
-Translate using sampling search
-------------------------------------
-
-``Sampling search`` default setting:
-
-      -  ``-s`` or ``--seq_length``: The maximum sequence length value, (``default value is 300``)
-      -  ``-o`` or ``--max_outputs``: The maximum of the output tanslations (``default value is 1``)
-      -  ``-k`` or ``--top_k``: Sample from top K likely next words instead of all words (``default value is 50``)
-      -  ``-p`` or ``--top_p``: Sample from the smallest set whose cumulative probability mass exceeds p for next words (``default value is 0.95``)
 
 .. code:: python
 
-      sampling_options = {"search_method":"sampling", "seq_length": 300, "max_outputs":1, "top_p":0.95, "top_k":50}
-      target = torj.translate("As US reaches one million COVID deaths, how are Americans coping?",**sampling_options)
-      print (target)
+      import pandas as pd
+      from tqdm import tqdm
+      tqdm.pandas()
+      df = pd.read_csv("examples.tsv", sep="\t")
+      
+      def get_afrolid_prediction(text):
+            predictions = cl.classify(text, max_outputs=1)
+            for lang in predictions:
+                  return lang, predictions[lang]['score'], predictions[lang]['name'], predictions[lang]['script']
 
+      df['predict_iso'], df['predict_score'], df['predict_name'], df['predict_script'] = zip(*df['content'].progress_apply(get_afrolid_prediction))
 
 .. code-block:: console
 
