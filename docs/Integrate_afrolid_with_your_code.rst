@@ -30,7 +30,7 @@ Import related packges
             level=os.environ.get("LOGLEVEL", "INFO").upper(),
             force=True, # Resets any previous configuration
       )
-      logger = logging.getLogger("afroli")
+      logger = logging.getLogger("afrolid")
 
 Create turjuman object
 
