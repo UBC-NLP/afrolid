@@ -35,7 +35,7 @@ Usage and Arguments
                   -o MAX_OUTPUTS, --max_outputs MAX_OUTPUTS  number of hypotheses to output,  default vlaue is 3
                   -l LOGGING_FILE, --logging_file LOGGING_FILE the logging file path, default vlaue is  None
 
-(2) AfrlioLID Interactive
+AfrlioLID Interactive
 ---------------------------
 
 .. code-block:: console
