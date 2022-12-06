@@ -1,0 +1,6 @@
+tensorboardX
+regex
+torch
+sentencepiece
+fairseq
+tqdm

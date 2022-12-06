@@ -1,0 +1,16 @@
+LICENSE
+README.rst
+setup.py
+afrolid/__init__.py
+afrolid/cli.py
+afrolid/copyright.py
+afrolid/main.py
+afrolid.egg-info/PKG-INFO
+afrolid.egg-info/SOURCES.txt
+afrolid.egg-info/dependency_links.txt
+afrolid.egg-info/entry_points.txt
+afrolid.egg-info/requires.txt
+afrolid.egg-info/top_level.txt
+afrolid/tasks/__init__.py
+afrolid/tasks/afrolid_task.py
+afrolid/tasks/fairseq_task.py

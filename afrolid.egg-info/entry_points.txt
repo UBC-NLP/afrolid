@@ -1,0 +1,3 @@
+[console_scripts]
+afrolid_cli = afrolid.cli:afrolid_cli
+
