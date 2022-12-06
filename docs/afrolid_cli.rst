@@ -1,6 +1,6 @@
 Interactive Command Line
 =====================
-   -  Turjuman interactive cli ``turjuman_interactive`` support only beam search with the following default setting:
+   -  AfroLID interactive cli ``afrolid_cli`` support only beam search with the following default setting:
 
       -  ``-m`` or ``--model_path``: Rath of the AfroLID model directory, (``Required``)
       -  ``-o`` or ``--max_outputs``: The maximum of the output tanslations (``default value is 3``)
@@ -19,7 +19,7 @@ Usage and Arguments
 -------------------
 .. code-block:: console
 
-      turjuman_interactive -h
+      afrolid_cli -h
 
 .. code-block:: console
             usage: afrolid_cli [-h]
