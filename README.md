@@ -84,7 +84,7 @@ The [full documentation](https://afrolid.readthedocs.io/en/latest/) contains ins
 </table>
 
 ## Supported languages
-Please refer to href="https://colab.research.google.com/github/UBC-NLP/afrolid/supported-languages" supported-languages
+Please refer to href="https://github/UBC-NLP/afrolid/supported-languages" supported-languages
 
 ## License
 afrolid(-py) is Apache-2.0 licensed. The license applies to the pre-trained models as well.
