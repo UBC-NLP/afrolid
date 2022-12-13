@@ -1,4 +1,4 @@
-<p align="center"> 
+<p align="center">
 <img src="./images/afrolid_logo.jpg" alt="AfroLID" width="70%" />
 </p>
 <p align="center">
