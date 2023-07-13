@@ -50,7 +50,7 @@ AfroLID, a neural LID toolkit for 517 African languages and varieties. AfroLID e
 The [full documentation](https://afrolid.readthedocs.io/en/latest/) contains instructions for getting started, translation using diffrent methods, intergrate AfroLID with your code, and provides more examples.
 
 ## Colab Examples
-### (1) Integrate Turjuman with your python code
+### (1) Integrate AfroLID with your python code
 <table style='border:1px red;' width='100%'>
 <tr><td> <b>Content</b></td><td><b>Colab link</b></td></tr>
 <td>
