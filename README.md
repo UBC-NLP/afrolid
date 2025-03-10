@@ -24,6 +24,38 @@ AfroLID, a neural LID toolkit for 517 African languages and varieties. AfroLID e
 
 <br>
 
+
+## What's New in Afrolid v1.5?
+- **Fine-tuned on [SERENGETI](https://huggingface.co/UBC-NLP/serengeti)**, a massively multilingual language model covering 517 African languages and language varieties.
+- **Enhanced model performance**, improving macro-F1 from 95.95 to 97.41.
+- **Built on Hugging Face Transformers** for seamless integration.
+- **Optimized for easy use** with the Hugging Face pipeline.
+- **Better efficiency and accuracy**, making it more robust for African langauges identification.
+
+
+## How to use Afrolid v1.5?
+
+``` python
+from transformers import pipeline
+
+
+afrolid = pipeline("text-classification", model='UBC-NLP/afrolid_1.5')
+
+input_text="6Acï looi aya në wuöt dït kɔ̈k yiic ku lɔ wuöt tɔ̈u tëmec piny de Manatha ku Eparaim ku Thimion , ku ɣään mec tɔ̈u të lɔ rut cï Naptali"
+
+result = afrolid(input_text)
+
+# Extract the label and score from the first result
+language = result[0]['label']
+score = result[0]['score']
+
+print(f"detected langauge: {language}\tscore: {round(score*100, 2)}")
+
+```
+**Output**:
+```
+detected langauge: dip	score: 99.99
+```
 ## Requirements
 - Download AfroLID model:
 ```shell
