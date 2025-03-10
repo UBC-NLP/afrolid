@@ -25,7 +25,7 @@ AfroLID, a neural LID toolkit for 517 African languages and varieties. AfroLID e
 <br>
 
 
-## What's New in Afrolid v1.5?
+## What's New in AfroLID v1.5?
 - **Fine-tuned on [SERENGETI](https://huggingface.co/UBC-NLP/serengeti)**, a massively multilingual language model covering 517 African languages and language varieties.
 - **Enhanced model performance**, improving macro-F1 from 95.95 to 97.41.
 - **Built on Hugging Face Transformers** for seamless integration.
@@ -33,7 +33,7 @@ AfroLID, a neural LID toolkit for 517 African languages and varieties. AfroLID e
 - **Better efficiency and accuracy**, making it more robust for African langauges identification.
 
 
-## How to use Afrolid v1.5?
+## How to use AfroLID v1.5?
 
 ``` python
 from transformers import pipeline
