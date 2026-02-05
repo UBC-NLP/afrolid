@@ -38,10 +38,9 @@ AfroLID, a neural LID toolkit for 517 African languages and varieties. AfroLID e
 ``` python
 from transformers import pipeline
 
+afrolid = pipeline("text-classification", model='UBC-NLP/afrolid_1.5', use_fast=False)
 
-afrolid = pipeline("text-classification", model='UBC-NLP/afrolid_1.5')
-
-input_text="6Acï looi aya në wuöt dït kɔ̈k yiic ku lɔ wuöt tɔ̈u tëmec piny de Manatha ku Eparaim ku Thimion , ku ɣään mec tɔ̈u të lɔ rut cï Naptali"
+input_text = "6Acï looi aya në wuöt dït kɔ̈k yiic ku lɔ wuöt tɔ̈u tëmec piny de Manatha ku Eparaim ku Thimion , ku ɣään mec tɔ̈u të lɔ rut cï Naptali"
 
 result = afrolid(input_text)
 
@@ -49,7 +48,7 @@ result = afrolid(input_text)
 language = result[0]['label']
 score = result[0]['score']
 
-print(f"detected langauge: {language}\tscore: {round(score*100, 2)}")
+print(f"detected language: {language}\tscore: {round(score*100, 2)}")
 
 ```
 **Output**:
